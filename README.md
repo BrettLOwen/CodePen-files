@@ -51,7 +51,16 @@ When the parent element here has an active modifier applied, various styles on t
     }
 }
 ```
-The key benefit of applying these styles in CSS is that we can change the layout, remove elements or even add more to this section without causing any problems to the code we have already written. 
+The key benefit of applying these styles in CSS is that we can change the layout, remove elements or even add more to this section without causing any problems to the code we have already written.
+
+
+Now all we have to do is add an event listener to apply these changes. For this example I am using a click event.
+
+```js
+document.querySelector('.btn').addEventListener('click', function(){
+   document.querySelector('.user-panel').classList.add('user-panel--active');
+});
+```
 
 ### The styles above are only applied when the parent has this active modifier they don't effect the page until they are needed.
 
